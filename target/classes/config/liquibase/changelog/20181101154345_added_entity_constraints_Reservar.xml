@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Reservar.
+    -->
+    <changeSet id="20181101154345-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="reservars_id"
+                                 baseTableName="reservar_jogo"
+                                 constraintName="fk_reservar_jogo_reservars_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="reservar"/>
+        <addForeignKeyConstraint baseColumnNames="jogos_id"
+                                 baseTableName="reservar_jogo"
+                                 constraintName="fk_reservar_jogo_jogos_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jogo"/>
+        
+        <addForeignKeyConstraint baseColumnNames="reservars_id"
+                                 baseTableName="reservar_plataformas"
+                                 constraintName="fk_reservar_plataformas_reservars_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="reservar"/>
+        <addForeignKeyConstraint baseColumnNames="plataformas_id"
+                                 baseTableName="reservar_plataformas"
+                                 constraintName="fk_reservar_plataformas_plataformas_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plataforma"/>
+        
+    </changeSet>
+</databaseChangeLog>

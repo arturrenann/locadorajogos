@@ -1,0 +1,26 @@
+entity Cliente{
+	nome String,
+    identidade String,
+    cpf String,
+    email String,
+    telefone String
+    
+}
+entity Jogo {
+	nome String,    
+}
+entity Plataforma {
+    plataforma String,
+    valor Integer,
+}
+entity Reservar{
+	dias Integer,
+    dataInicio LocalDate,
+    dataEntrega LocalDate
+}
+relationship ManyToMany{
+  	Cliente{Reserva} to Reservar{cliente(nome)}
+   	 Reservar{jogo(nome)} to Jogo{reservar}
+    	Reservar{plataformas(plataforma)} to Plataforma{reservar}
+}
+

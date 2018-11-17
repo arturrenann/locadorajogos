@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-3">
+        <span class="hipster img-fluid rounded"></span>
+    </div>
+    <div class="col-md-9">
+        <h1 class="display-4">Bem vindo(a), <span>Locadora</span>!</h1>
+        <p class="lead">Escolha suas opções:</p>
+        <button id="jh-create-entity1" class="btn btn-danger jh-create-entity create-cliente" [routerLink]="['/cliente/new']">
+            <fa-icon [icon]="'user-plus'"></fa-icon>
+            <span >
+            Novo Cliente
+            </span>
+        </button>
+        <button id="jh-create-entity2" class="btn btn-danger jh-create-entity create-jogo" [routerLink]="['/jogo/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Novo Jogo
+            </span>
+        </button>
+        <button id="jh-create-entity3" class="btn btn-success jh-create-entity create-reservar" [routerLink]="['/reservar/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Criar Reserva
+            </span>
+        </button>
+    </div>
+</div>
